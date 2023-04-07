@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 48px;
+  color: #b80000;
+  display: flex;
+  align-items: center;
+}
