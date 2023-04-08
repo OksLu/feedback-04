@@ -12,22 +12,26 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const handleClick = e => {
-    const option = e.target.name;
-    if (option === 'good') {
-      setGood(good + 1);
-    }
-    if (option === 'neutral') {
-      setNeutral(neutral + 1);
-    }
-    if (option === 'bad') {
-      setBad(bad + 1);
+    switch (e.target.name) {
+      case 'good':
+        setGood(good + 1);
+        break;
+      case 'neutral':
+        setNeutral(neutral + 1);
+        break;
+      case 'bad':
+        setBad(bad + 1);
+        break;
+      default:
+        setGood(0);
+        setNeutral(0);
+        setBad(0);
     }
   };
   const countTotalFeedback = () => {
     return good + neutral + bad;
   };
   const countPositiveFeedbackPercentage = () => {
-    const total = countTotalFeedback();
     if (total > 0) {
       return Math.round((good / total) * 100);
     }
