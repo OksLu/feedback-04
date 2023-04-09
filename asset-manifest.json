@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/feedback-04/static/css/main.a9dca66a.css",
-    "main.js": "/feedback-04/static/js/main.ec53d6e6.js",
+    "main.js": "/feedback-04/static/js/main.bc24fe22.js",
     "static/media/cute-love-sign-total-goldfish.jpg": "/feedback-04/static/media/cute-love-sign-total-goldfish.2bfc5414932fc39edb95.jpg",
     "index.html": "/feedback-04/index.html",
     "main.a9dca66a.css.map": "/feedback-04/static/css/main.a9dca66a.css.map",
-    "main.ec53d6e6.js.map": "/feedback-04/static/js/main.ec53d6e6.js.map"
+    "main.bc24fe22.js.map": "/feedback-04/static/js/main.bc24fe22.js.map"
   },
   "entrypoints": [
     "static/css/main.a9dca66a.css",
-    "static/js/main.ec53d6e6.js"
+    "static/js/main.bc24fe22.js"
   ]
 }
