@@ -14,18 +14,16 @@ export const App = () => {
   const handleClick = e => {
     switch (e.target.name) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevState => prevState + 1);
         break;
       case 'neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevState => prevState + 1);
         break;
       case 'bad':
-        setBad(bad + 1);
+        setBad(prevState => prevState + 1);
         break;
       default:
-        setGood(0);
-        setNeutral(0);
-        setBad(0);
+        return;
     }
   };
   const countTotalFeedback = () => {
@@ -36,9 +34,9 @@ export const App = () => {
       return Math.round((good / total) * 100);
     }
   };
-  const total = countTotalFeedback();
+
   const options = ['good', 'neutral', 'bad'];
-  const positivePercentage = countPositiveFeedbackPercentage();
+  const total = countTotalFeedback();
 
   return (
     <div>
@@ -58,8 +56,8 @@ export const App = () => {
             good={good}
             neutral={neutral}
             bad={bad}
-            total={total}
-            positivePercentage={positivePercentage}
+            total={countTotalFeedback}
+            positivePercentage={countPositiveFeedbackPercentage}
           />
         </Section>
       ) : (
